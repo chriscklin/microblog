@@ -1,0 +1,15 @@
+{% extends "posts_div.html" %}
+{% block title %}{{username}}'s Posts{% endblock%}
+{% block header %} 
+{% if current_user.username == username %}
+<h1 align="center">My Posts</h1>
+{% else %}
+<h1 align="center">{{username}}'s Posts</h1>
+{% endif %}
+{% endblock %}
+{% block button %}{% endblock %}
+{% block footer %}
+<div align="center">
+    <a class="btn btn-lg btn-primary" href="/home" role="button">Back</a>
+</div>
+{% endblock %}
